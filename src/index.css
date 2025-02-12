@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Inter", serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  align-items: center;
+  position: relative;
+  margin: 0 5%;
+}
+header .burger-image {
+  width: 70px;
+  height: 30px;
+}
+header .logo-image {
+  transform: scale(0.8);
+}
+header .nav-list {
+  display: none;
+}
+header dialog {
+  width: 60%;
+  margin-left: auto;
+  top: 0;
+  min-height: 100vh;
+  border: 0;
+  background-color: hsl(36, 100%, 99%);
+}
+header dialog .menu-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+header dialog ul {
+  list-style: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 30%;
+  left: 30px;
+}
+header dialog ul li {
+  margin-bottom: 30px;
+}
+header dialog ul li:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+main {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .title-container {
+  margin-bottom: 50px;
+}
+main .title-container .title {
+  font-weight: 800;
+  font-size: 2.1rem;
+  margin-bottom: 30px;
+}
+main .title-container .title-image {
+  width: 100%;
+  margin-bottom: 30px;
+}
+main .title-container .title-description {
+  color: hsl(236, 13%, 42%);
+  margin-bottom: 30px;
+}
+main .title-container button {
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  font-weight: 700;
+  padding: 15px 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+main .new-list {
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  padding: 20px;
+  list-style: none;
+  margin-bottom: 40px;
+}
+main .new-list .list-title {
+  color: hsl(35, 77%, 62%);
+  margin-bottom: 30px;
+}
+main .new-list li {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+  color: hsl(233, 8%, 79%);
+}
+main .new-list li .new-list-subtitle {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .new-list li:last-child {
+  border: none;
+  padding-bottom: 5px;
+  margin: 0;
+}
+main .popular-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+main .popular-container .popular-card {
+  display: flex;
+  gap: 20px;
+}
+main .popular-container .popular-card img {
+  max-width: 25%;
+}
+main .popular-container .popular-card .popular-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .popular-container .popular-card .popular-text h2 {
+  color: hsl(5, 85%, 63%);
+  font-size: 2rem;
+}
+main .popular-container .popular-card .popular-text h3 {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+  body {
+    transform: scale(0.8);
+    max-height: 100vh;
+  }
+  header {
+    max-width: 1200px;
+  }
+  header .burger-image {
+    display: none;
+  }
+  header .nav-list {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    list-style: none;
+  }
+  header .nav-list li:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+  }
+  main {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    row-gap: 70px;
+  }
+  main .title-container {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px auto;
+    gap: 20px;
+  }
+  main .title-container picture {
+    grid-column: 1/3;
+  }
+  main .title-container picture img {
+    margin-bottom: 0;
+    max-height: 250px;
+  }
+  main .title-container .title {
+    margin-bottom: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 3rem;
+    margin-top: auto;
+  }
+  main .title-container .description {
+    margin-top: auto;
+  }
+  main .title-container .description .title-description {
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+  }
+  main .title-container .description .read-more {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 0;
+  }
+  main .title-container .description .read-more:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  main .new-list {
+    grid-row: 1/3;
+    margin-bottom: 0;
+    font-size: larger;
+  }
+  main .new-list .new-list-subtitle:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+  }
+  main .popular-container {
+    flex-direction: row;
+    grid-column: 1/4;
+  }
+  main .popular-container .popular-card .popular-image {
+    min-height: 100%;
+    min-width: 120px;
+    width: 40%;
+  }
+  main .popular-container .popular-card .popular-text {
+    width: 60%;
+  }
+  main .popular-container .popular-card .popular-text h2 {
+    font-size: 2.2rem;
+  }
+  main .popular-container .popular-card .popular-text h3 {
+    font-size: 1rem;
+  }
+  main .popular-container .popular-card .popular-text h3:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=index.css.map */
